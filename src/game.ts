@@ -305,16 +305,17 @@ const positionY = 25
 const width = 34
 const height = 34
  
-let supportConfiguration: SupportConfig
-supportConfiguration.iconPath = iconPath
-supportConfiguration.destinationUrl = destinationUrl
-supportConfiguration.promptDescription = promptDescription
-supportConfiguration.promptButtonText = promptButtonText
-supportConfiguration.hAllign = hAllign
-supportConfiguration.vAllign = vAllign
-supportConfiguration.positionX = positionX
-supportConfiguration.positionY = positionY
-supportConfiguration.width = width
-supportConfiguration.height = height
+let supportConfiguration: SupportConfig = {
+  iconPath: iconPath,
+  destinationUrl: destinationUrl,
+  promptDescription: promptDescription,
+  promptButtonText: promptButtonText,
+  hAllign: hAllign,
+  vAllign: vAllign,
+  positionX: positionX,
+  positionY: positionY,
+  width: width,
+  height: height
+}
 
 initGameSupportUI(supportConfiguration)

@@ -6,7 +6,6 @@ export type SupportConfig={
     destinationUrl:string
     promptDescription:string
     promptButtonText:string
-    iconPostion: string
     hAllign: "left" | "center" | "right"
     vAllign: "top" | "center" | "bottom"
     positionX: number
