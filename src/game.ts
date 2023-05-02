@@ -41,6 +41,7 @@ import {
 } from './modules/bar/barNPCs'
 import { startArtichoke } from './modules/artichoke'
 import { handleQuests } from './quests'
+import { SupportConfig, initGameSupportUI } from './supportIcon'
 
 //////// LOG PLAYER POSITION
 
@@ -291,3 +292,29 @@ export function outsideBar() {
     0.6
   )
 }
+
+
+const iconPath = 'assets/ui/support/support_icon.png'
+const destinationUrl = "https://intercom.decentraland.org/"
+const promptDescription = 'Having trouble with your experience?'
+const promptButtonText = 'Get Support'
+const hAllign = "left"
+const vAllign = "top"
+const positionX = 163
+const positionY = 25
+const width = 34
+const height = 34
+ 
+let supportConfiguration: SupportConfig
+supportConfiguration.iconPath = iconPath
+supportConfiguration.destinationUrl = destinationUrl
+supportConfiguration.promptDescription = promptDescription
+supportConfiguration.promptButtonText = promptButtonText
+supportConfiguration.hAllign = hAllign
+supportConfiguration.vAllign = vAllign
+supportConfiguration.positionX = positionX
+supportConfiguration.positionY = positionY
+supportConfiguration.width = width
+supportConfiguration.height = height
+
+initGameSupportUI(supportConfiguration)
