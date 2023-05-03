@@ -30,18 +30,19 @@ export function initGameSupportUI(support: SupportConfig){
  
     let open = false
 
-    const clickableImage = new UIImage(screenSpaceUI, new Texture(support.iconPath))
-    clickableImage.visible = true
-    clickableImage.hAlign = support.hAllign
-    clickableImage.vAlign = support.vAllign
-    clickableImage.width = support.width
-    clickableImage.height = support.hAllign
-    clickableImage.positionX = support.positionX
-    clickableImage.positionY = support.positionY
-    clickableImage.sourceWidth = 36
-    clickableImage.sourceHeight = 36
-    clickableImage.isPointerBlocker = true
-    clickableImage.onClick = new OnPointerDown(() => {
+  
+
+    const clickableImage333 = new UIImage(screenSpaceUI, new Texture('images/ui/support_icon.png'))
+    clickableImage333.hAlign = support.hAllign
+    clickableImage333.vAlign = support.vAllign
+    clickableImage333.width = support.width
+    clickableImage333.height = support.height
+    clickableImage333.positionX = support.positionX
+    clickableImage333.positionY = support.positionY
+    clickableImage333.sourceWidth = 36
+    clickableImage333.sourceHeight = 36
+    clickableImage333.isPointerBlocker = true
+    clickableImage333.onClick = new OnPointerDown(() => {
         if(open){
             open = false
             prompt.hide()
