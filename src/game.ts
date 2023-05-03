@@ -294,7 +294,7 @@ export function outsideBar() {
 }
 
 
-const iconPath = 'assets/ui/support/support_icon.png'
+const iconPath = 'images/ui/support_icon.png'
 const destinationUrl = "https://intercom.decentraland.org/"
 const promptDescription = 'Having trouble with your experience?'
 const promptButtonText = 'Get Support'

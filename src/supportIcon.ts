@@ -1,4 +1,5 @@
 import * as ui from '@dcl/ui-scene-utils'
+import { screenSpaceUI } from './modules/ui'
 
 
 export type SupportConfig={
@@ -16,6 +17,7 @@ export type SupportConfig={
  
 
 export function initGameSupportUI(support: SupportConfig){
+    log("InitGameSupport has been called")
     let prompt = new ui.OkPrompt(
         support.promptDescription,
         () => {
@@ -25,9 +27,11 @@ export function initGameSupportUI(support: SupportConfig){
         false
     )
     prompt.hide()
-
+ 
     let open = false
-    const clickableImage = new UIImage(prompt.canvas, new Texture(support.iconPath))
+
+    const clickableImage = new UIImage(screenSpaceUI, new Texture(support.iconPath))
+    clickableImage.visible = true
     clickableImage.hAlign = support.hAllign
     clickableImage.vAlign = support.vAllign
     clickableImage.width = support.width
